@@ -1,0 +1,12 @@
+fs
+  .readFileAsync(inputFile)
+  .then(Promise.promisify(process1))
+  .then(Promise.promisify(process2))
+  .then(Promise.promisify(process3))
+  .then(fs.writeFileAsync.bind(fs, outputFile))
+  .then(function(data) {
+    res.status(200).send("processed successfully using promises");
+  })
+  .catch(function(err) {
+    res.status(500).send(err);
+  });

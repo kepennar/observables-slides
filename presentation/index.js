@@ -12,32 +12,32 @@ import {
   Slide,
   Text,
   Link,
-  Appear
+  Appear,
+  CodePane
 } from "spectacle";
-
-import DiagSample from "./diag-sample";
 
 // Import image preloader util
 import preloader from "spectacle/lib/utils/preloader";
 
 // Import theme
 import createTheme from "spectacle/lib/themes/default";
+import DiagSample from "./rxjs/diag-sample";
 
 require("../assets/fonts/fonts.css");
+require("./style.css");
 
 const images = {
-  reactivex: require("../assets/reactivex.svg")
-  // chemicalEq: require("../assets/chemical-equation.png"),
+  reactivex: require("../assets/reactivex.svg"),
+  eventLoop: require("../assets/eventLoop.svg"),
+  nodejs: require("../assets/nodejs.png"),
+  promiseObservable: require("../assets/promise-observable.svg")
   // htmlTable: require("../assets/html-periodic-table.png"),
   // polymerElements: require("../assets/polymer-elements.png"),
   // angular: require("../assets/angular-icon.svg"),
   // comps: require("../assets/components.png"),
   // compsConnected: require("../assets/components-connected.png")
 };
-const containStyle = {
-  backgroundRepeat: "no-repeat",
-  backgroundSize: "contain"
-};
+
 preloader(images);
 
 const theme = createTheme(
@@ -52,6 +52,11 @@ const theme = createTheme(
     secondary: "Track"
   }
 );
+
+const containStyle = {
+  bgRepeat: "no-repeat",
+  bgSize: "contain"
+};
 
 export default class Presentation extends React.Component {
   render() {
@@ -73,12 +78,56 @@ export default class Presentation extends React.Component {
           >
             Observables
           </Heading>
-          <Text textColor="tertiary" size={1} fit bold>
-            Reactive programming with RxJS
-          </Text>
+          <Appear fid="1">
+            <Text textColor="tertiary" size={1} fit bold>
+              Reactive programming with RxJS
+            </Text>
+          </Appear>
         </Slide>
-
-        <Slide transition={["fade"]} bgImage={images.reactivex} style={containStyle} />
+        {/*Async*/}
+        <Slide bgImage={images.nodejs} {...containStyle} transition={["zoom"]}>
+          <Heading size={2} fit lineHeight={2}>
+            Javascript est asynchrone
+          </Heading>
+          <Appear fid="1">
+            <Text textColor="tertiary" size={1} fit bold>
+              Event loop
+            </Text>
+          </Appear>
+        </Slide>
+        <Slide
+          transition={["fade"]}
+          bgImage={images.eventLoop}
+          {...containStyle}
+        />
+        <Slide>
+          <CodePane
+            lang="js"
+            source={require("raw-loader!../assets/code/callbacks.example")}
+            margin="20px auto"
+          />
+        </Slide>
+        <Slide>
+          <CodePane
+            lang="js"
+            source={require("raw-loader!../assets/code/promises.example")}
+            margin="20px auto"
+          />
+        </Slide>
+        <Slide bgImage={images.promiseObservable} {...containStyle} />
+        
+        {/*RxJS*/}
+        <Slide
+          transition={["zoom"]}
+          bgImage={images.reactivex}
+          {...containStyle}
+        >
+          <Appear fid="1">
+            <Heading size={1} fit lineHeight={2}>
+              ReactiveX
+            </Heading>
+          </Appear>
+        </Slide>
         <Slide transition={["fade"]}>
           <DiagSample />
         </Slide>

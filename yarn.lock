@@ -248,7 +248,7 @@ aws4@^1.2.1:
   version "1.6.0"
   resolved aws4-1.6.0.tgz#83ef5ca860b2b32e4a0deedee8c771b9db57471e
 
-babel-cli@^6.16.0, babel-cli@^6.5.1:
+babel-cli@^6.16.0, babel-cli@^6.24.0, babel-cli@^6.5.1:
   version "6.24.1"
   resolved babel-cli-6.24.1.tgz#207cd705bba61489b2ea41b5312341cf6aca2283
   dependencies:
@@ -277,7 +277,7 @@ babel-code-frame@^6.11.0, babel-code-frame@^6.16.0, babel-code-frame@^6.22.0:
     esutils "^2.0.2"
     js-tokens "^3.0.0"
 
-babel-core@^6.0.0, babel-core@^6.18.0, babel-core@^6.24.1:
+babel-core@^6.0.0, babel-core@^6.18.0, babel-core@^6.24.0, babel-core@^6.24.1:
   version "6.24.1"
   resolved babel-core-6.24.1.tgz#8c428564dce1e1f41fb337ec34f4c3b022b5ad83
   dependencies:
@@ -472,6 +472,10 @@ babel-messages@^6.23.0:
   dependencies:
     babel-runtime "^6.22.0"
 
+babel-plugin-add-module-exports@^0.2.1:
+  version "0.2.1"
+  resolved babel-plugin-add-module-exports-0.2.1.tgz#9ae9a1f4a8dc67f0cdec4f4aeda1e43a5ff65e25
+
 babel-plugin-check-es2015-constants@^6.22.0:
   version "6.22.0"
   resolved babel-plugin-check-es2015-constants-6.22.0.tgz#35157b101426fd2ffd3da3f75c7d1e91835bbf8a
@@ -573,7 +577,7 @@ babel-plugin-transform-class-properties@^6.24.1:
     babel-runtime "^6.22.0"
     babel-template "^6.24.1"
 
-babel-plugin-transform-decorators-legacy@^1.2.0:
+babel-plugin-transform-decorators-legacy@^1.2.0, babel-plugin-transform-decorators-legacy@^1.3.4:
   version "1.3.4"
   resolved babel-plugin-transform-decorators-legacy-1.3.4.tgz#741b58f6c5bce9e6027e0882d9c994f04f366925
   dependencies:
@@ -682,7 +686,7 @@ babel-plugin-transform-es2015-modules-amd@^6.24.1:
     babel-runtime "^6.22.0"
     babel-template "^6.24.1"
 
-babel-plugin-transform-es2015-modules-commonjs@^6.24.1:
+babel-plugin-transform-es2015-modules-commonjs@^6.24.0, babel-plugin-transform-es2015-modules-commonjs@^6.24.1:
   version "6.24.1"
   resolved babel-plugin-transform-es2015-modules-commonjs-6.24.1.tgz#d3e310b40ef664a36622200097c6d440298f2bfe
   dependencies:
@@ -873,7 +877,7 @@ babel-polyfill@^6.16.0, babel-polyfill@^6.23.0, babel-polyfill@^6.5.0:
     core-js "^2.4.0"
     regenerator-runtime "^0.10.0"
 
-babel-preset-es2015@^6.0.0, babel-preset-es2015@^6.18.0:
+babel-preset-es2015@^6.0.0, babel-preset-es2015@^6.18.0, babel-preset-es2015@^6.24.0:
   version "6.24.1"
   resolved babel-preset-es2015-6.24.1.tgz#d44050d6bc2c9feea702aaf38d727a0210538939
   dependencies:
@@ -908,7 +912,7 @@ babel-preset-flow@^6.23.0:
   dependencies:
     babel-plugin-transform-flow-strip-types "^6.22.0"
 
-babel-preset-react@^6.0.0, babel-preset-react@^6.3.13:
+babel-preset-react@^6.0.0, babel-preset-react@^6.23.0, babel-preset-react@^6.3.13:
   version "6.24.1"
   resolved babel-preset-react-6.24.1.tgz#ba69dfaea45fc3ec639b6a4ecea6e17702c91380
   dependencies:
@@ -927,7 +931,7 @@ babel-preset-stage-0@^6.0.0, babel-preset-stage-0@^6.3.13:
     babel-plugin-transform-function-bind "^6.22.0"
     babel-preset-stage-1 "^6.24.1"
 
-babel-preset-stage-1@^6.0.0, babel-preset-stage-1@^6.24.1:
+babel-preset-stage-1@^6.0.0, babel-preset-stage-1@^6.22.0, babel-preset-stage-1@^6.24.1:
   version "6.24.1"
   resolved babel-preset-stage-1-6.24.1.tgz#7692cd7dcd6849907e6ae4a0a85589cfb9e2bfb0
   dependencies:
@@ -1219,8 +1223,8 @@ caniuse-api@^1.5.2:
     lodash.uniq "^4.5.0"
 
 caniuse-db@^1.0.30000529, caniuse-db@^1.0.30000634, caniuse-db@^1.0.30000639:
-  version "1.0.30000657"
-  resolved caniuse-db-1.0.30000657.tgz#8192aec745019cc050217ad049c60dad21e3d1bc
+  version "1.0.30000660"
+  resolved caniuse-db-1.0.30000660.tgz#d2d57b309dc5a11bb5b46018f51855f7a41efee5
 
 caseless@~0.12.0:
   version "0.12.0"
@@ -1839,13 +1843,7 @@ debug@2.6.1:
   dependencies:
     ms "0.7.2"
 
-debug@2.6.3:
-  version "2.6.3"
-  resolved debug-2.6.3.tgz#0f7eb8c30965ec08c72accfa0130c8b79984141d
-  dependencies:
-    ms "0.7.2"
-
-debug@^2.0.0, debug@^2.1.1, debug@^2.2.0:
+debug@2.6.4, debug@^2.0.0, debug@^2.1.1, debug@^2.2.0:
   version "2.6.4"
   resolved debug-2.6.4.tgz#7586a9b3c39741c0282ae33445c4e8ac74734fe0
   dependencies:
@@ -1982,8 +1980,8 @@ ee-first@1.1.1:
   resolved ee-first-1.1.1.tgz#590c61156b0ae2f4f0255732a158b266bc56b21d
 
 electron-to-chromium@^1.2.7:
-  version "1.3.6"
-  resolved electron-to-chromium-1.3.6.tgz#b90ff7e9094e6f7dd343761a001e82592d937db2
+  version "1.3.8"
+  resolved electron-to-chromium-1.3.8.tgz#b2c8a2c79bb89fbbfd3724d9555e15095b5f5fb6
 
 elegant-spinner@^1.0.0:
   version "1.0.1"
@@ -2298,8 +2296,8 @@ evp_bytestokey@^1.0.0:
     create-hash "^1.1.1"
 
 exenv@^1.2.1:
-  version "1.2.1"
-  resolved exenv-1.2.1.tgz#75de1c8dee02e952b102aa17f8875973e0df14f9
+  version "1.2.2"
+  resolved exenv-1.2.2.tgz#2ae78e85d9894158670b03d47bec1f03bd91bb9d
 
 exit-hook@^1.0.0:
   version "1.1.1"
@@ -2427,10 +2425,10 @@ fill-range@^2.1.0:
     repeat-string "^1.5.2"
 
 finalhandler@~1.0.0:
-  version "1.0.1"
-  resolved finalhandler-1.0.1.tgz#bcd15d1689c0e5ed729b6f7f541a6df984117db8
+  version "1.0.2"
+  resolved finalhandler-1.0.2.tgz#d0e36f9dbc557f2de14423df6261889e9d60c93a
   dependencies:
-    debug "2.6.3"
+    debug "2.6.4"
     encodeurl "~1.0.1"
     escape-html "~1.0.3"
     on-finished "~2.3.0"
@@ -2808,8 +2806,8 @@ html-comment-regex@^1.1.0:
   resolved html-comment-regex-1.1.1.tgz#668b93776eaae55ebde8f3ad464b307a4963625e
 
 html-entities@^1.2.0:
-  version "1.2.0"
-  resolved html-entities-1.2.0.tgz#41948caf85ce82fed36e4e6a0ed371a6664379e2
+  version "1.2.1"
+  resolved html-entities-1.2.1.tgz#0df29351f0721163515dfb9e5543e5f6eed5162f
 
 html-loader@^0.4.0:
   version "0.4.5"
@@ -2872,8 +2870,8 @@ i@0.3.x:
   resolved i-0.3.5.tgz#1d2b854158ec8169113c6cb7f6b6801e99e211d5
 
 iconv-lite@~0.4.13:
-  version "0.4.15"
-  resolved iconv-lite-0.4.15.tgz#fe265a218ac6a57cfe854927e9d04c19825eddeb
+  version "0.4.16"
+  resolved iconv-lite-0.4.16.tgz#65de3beeb39e2960d67f049f1634ffcbcde9014b
 
 icss-replace-symbols@^1.0.2:
   version "1.0.2"
@@ -5650,9 +5648,9 @@ webpack-core@~0.6.9:
     source-list-map "~0.1.7"
     source-map "~0.4.1"
 
-webpack-dev-middleware@^1.8.4:
-  version "1.10.1"
-  resolved webpack-dev-middleware-1.10.1.tgz#c6b4cf428139cf1aefbe06a0c00fdb4f8da2f893
+webpack-dev-middleware@^1.10.2:
+  version "1.10.2"
+  resolved webpack-dev-middleware-1.10.2.tgz#2e252ce1dfb020dbda1ccb37df26f30ab014dbd1
   dependencies:
     memory-fs "~0.4.1"
     mime "^1.3.4"

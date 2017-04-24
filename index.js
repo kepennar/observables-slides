@@ -8,7 +8,6 @@ import Presentation from "./presentation";
 // Require CSS
 require("normalize.css");
 require("spectacle/lib/themes/default/index.css");
-require("prismjs/themes/prism-tomorrow.css");
-
+require("prismjs/themes/prism-coy.css");
 
 render(<Presentation />, document.getElementById("root"));
