@@ -4,7 +4,7 @@ import OperatorDiagram from "rxjs-diagrams";
 
 export default () => (
   <OperatorDiagram fit
-    label=".merge(a, b, (x, y) => x + y)"
+    label=".merge(a, b)"
     transform={(a, b) => Observable.merge(a, b)}
     emissions={[
       [{ x: 10, d: 5 }, { x: 20, d: 15 }, { x: 30, d: 8 }, { x: 40, d: 11 }],
