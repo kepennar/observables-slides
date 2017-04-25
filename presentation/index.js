@@ -31,6 +31,7 @@ const images = {
   nodejs: require("../assets/nodejs.png"),
   promiseObservable: require("../assets/promise-observable.svg"),
   coding: require("../assets/coding.gif"),
+  hotvscold: require("../assets/hotvscold.jpg"),
 };
 
 preloader(images);
@@ -160,7 +161,7 @@ export default class Presentation extends React.Component {
           <RxMerge />
         </Slide>
         <Slide transition={["fade"]}>
-          <Heading size={2} fit lineHeight={2} textColor="secondary" >
+          <Heading size={3} fit lineHeight={2} textColor="secondary" >
               Many operators !!!!
           </Heading>
           <AllOperators />
@@ -173,6 +174,26 @@ export default class Presentation extends React.Component {
         <Slide bgImage={images.coding} {...containStyle}>
           <Link href="https://jsbin.com/heduvaboha/1/edit?js,output" target="_blank" >
             <Text bold caps textColor="tertiary">Subject</Text>
+          </Link>
+        </Slide>
+        <Slide bgImage={images.hotvscold}>
+          <Heading size={2} fit lineHeight={2} textColor="primary" style={shadowedTextStyle}>
+            Hot vs Cold
+          </Heading>
+        </Slide>
+        <Slide bgImage={images.coding} {...containStyle}>
+          <Link href="https://repl.it/H0U5/2" target="_blank" >
+            <Text bold caps textColor="tertiary">Cold observable</Text>
+          </Link>
+        </Slide>
+        <Slide bgImage={images.coding} {...containStyle}>
+          <Link href="https://repl.it/H0VU/1" target="_blank" >
+            <Text bold caps textColor="tertiary">Hot observable</Text>
+          </Link>
+        </Slide>
+        <Slide bgImage={images.coding} {...containStyle}>
+          <Link href="https://repl.it/H0W9/1" target="_blank" >
+            <Text bold caps textColor="tertiary">Share observable</Text>
           </Link>
         </Slide>
       </Deck>
