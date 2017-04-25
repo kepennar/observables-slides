@@ -17,6 +17,10 @@ import preloader from "spectacle/lib/utils/preloader";
 // Import theme
 import createTheme from "spectacle/lib/themes/default";
 import RxFilter from "./rxjs/rx-filter";
+import RxMap from "./rxjs/rx-map";
+import RxMapFilter from "./rxjs/rx-map-filter";
+import RxMerge from "./rxjs/rx-merge";
+import AllOperators from "./rxjs/all-operators";
 
 require("../assets/fonts/fonts.css");
 require("./style.css");
@@ -134,7 +138,7 @@ export default class Presentation extends React.Component {
           <Link href="http://reactivex.io/" target="_blank" >
             <Heading size={2} fit lineHeight={2} textColor="primary" style={shadowedTextStyle}>
               ReactiveX
-          </Heading>
+            </Heading>
           </Link>
           <Appear fid="1">
             <Text textColor="tertiary" size={1} fit bold>
@@ -144,7 +148,32 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgImage={images.promiseObservable} {...containStyle} />
         <Slide transition={["fade"]}>
+          <RxMap />
+        </Slide>
+        <Slide transition={["fade"]}>
           <RxFilter />
+        </Slide>
+        <Slide transition={["fade"]}>
+          <RxMapFilter />
+        </Slide>
+        <Slide transition={["fade"]}>
+          <RxMerge />
+        </Slide>
+        <Slide transition={["fade"]}>
+          <Heading size={2} fit lineHeight={2} textColor="secondary" >
+              Many operators !!!!
+          </Heading>
+          <AllOperators />
+        </Slide>
+        <Slide bgImage={images.coding} {...containStyle}>
+          <Link href="https://jsbin.com/qezovodeqi/1/edit?js,output" target="_blank" >
+            <Text bold caps textColor="tertiary">Form event</Text>
+          </Link>
+        </Slide>
+        <Slide bgImage={images.coding} {...containStyle}>
+          <Link href="https://jsbin.com/heduvaboha/1/edit?js,output" target="_blank" >
+            <Text bold caps textColor="tertiary">Subject</Text>
+          </Link>
         </Slide>
       </Deck>
     );
